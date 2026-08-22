@@ -1,23 +1,48 @@
-import { CircleCheck } from 'lucide-react'
-import { Button } from '@/components/Button.tsx'
+import { ButtonLink } from '@/components/ButtonLink.tsx'
 import { Container } from '@/components/Container.tsx'
-import { site } from '@/data/site.ts'
+import { OutcomesSection } from '@/components/OutcomesSection.tsx'
+import { Section } from '@/components/Section.tsx'
+import { SectionHeading } from '@/components/SectionHeading.tsx'
+import { ServicesSection } from '@/components/ServicesSection.tsx'
+import { consultation } from '@/data/consultation.ts'
+import { hero } from '@/data/hero.ts'
 
 export function HomePage() {
   return (
-    <Container className="flex min-h-dvh flex-col justify-center py-16">
-      <p className="text-sm font-medium text-ink-muted">Foundation</p>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight text-ink">
-        {site.name}
-      </h1>
-      <p className="mt-3 flex items-center gap-2 text-ink-muted">
-        <CircleCheck className="size-4 text-brand" aria-hidden="true" />
-        {site.foundationMessage}
-      </p>
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Button variant="primary">Primary</Button>
-        <Button variant="secondary">Secondary</Button>
-      </div>
-    </Container>
+    <>
+      <Section>
+        <Container>
+          <SectionHeading
+            as="h1"
+            eyebrow={hero.eyebrow}
+            title={hero.headline}
+            description={hero.copy}
+            className="max-w-3xl"
+          />
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <ButtonLink href={consultation.mailto}>
+              {consultation.ctaLabel}
+            </ButtonLink>
+            <ButtonLink variant="secondary" href={hero.secondaryCta.href}>
+              {hero.secondaryCta.label}
+            </ButtonLink>
+          </div>
+          <p className="mt-6 text-sm text-text-secondary">{hero.note}</p>
+        </Container>
+      </Section>
+
+      <OutcomesSection />
+
+      <ServicesSection />
+
+      <Section tone="secondary" id="packages" aria-labelledby="packages-heading">
+        <Container>
+          <SectionHeading
+            title={<span id="packages-heading">Consulting Packages</span>}
+            description="Package details are coming in a later phase. In the meantime, request a consultation to discuss what you are working on."
+          />
+        </Container>
+      </Section>
+    </>
   )
 }
