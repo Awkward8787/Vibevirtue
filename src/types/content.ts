@@ -19,6 +19,12 @@ export type CredibilityPoint = {
   icon: LucideIcon
 }
 
+export type FaqItem = {
+  id: string
+  question: string
+  answer: string
+}
+
 export type PackageAvailability = 'available' | 'limited' | 'waitlist'
 
 export type ConsultingPackage = {

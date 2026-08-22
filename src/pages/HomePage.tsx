@@ -1,6 +1,8 @@
 import { AboutSection } from '@/components/AboutSection.tsx'
 import { ButtonLink } from '@/components/ButtonLink.tsx'
+import { ContactSection } from '@/components/ContactSection.tsx'
 import { Container } from '@/components/Container.tsx'
+import { FaqSection } from '@/components/FaqSection.tsx'
 import { OutcomesSection } from '@/components/OutcomesSection.tsx'
 import { PackagesSection } from '@/components/PackagesSection.tsx'
 import { ProcessSection } from '@/components/ProcessSection.tsx'
@@ -46,6 +48,10 @@ export function HomePage() {
       <AboutSection />
 
       <WhySection />
+
+      <FaqSection />
+
+      <ContactSection />
     </>
   )
 }
