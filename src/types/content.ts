@@ -25,6 +25,19 @@ export type FaqItem = {
   answer: string
 }
 
+export type LegalSection = {
+  heading: string
+  paragraphs: readonly string[]
+  items?: readonly string[]
+}
+
+export type LegalPageContent = {
+  slug: string
+  title: string
+  intro: string
+  sections: readonly LegalSection[]
+}
+
 export type PackageAvailability = 'available' | 'limited' | 'waitlist'
 
 export type ConsultingPackage = {

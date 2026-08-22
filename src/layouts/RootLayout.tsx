@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Footer } from '@/components/Footer.tsx'
 import { Header } from '@/components/Header.tsx'
 
 type RootLayoutProps = {
@@ -16,6 +17,7 @@ export function RootLayout({ children }: RootLayoutProps) {
       </a>
       <Header />
       <main id="main">{children}</main>
+      <Footer />
     </div>
   )
 }
