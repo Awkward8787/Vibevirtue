@@ -38,7 +38,7 @@ export function Footer() {
             {legalPages.map((page) => (
               <a
                 key={page.slug}
-                href={`/${page.slug}`}
+                href={`/${page.slug}/`}
                 className={footerLinkClasses}
               >
                 {page.title}

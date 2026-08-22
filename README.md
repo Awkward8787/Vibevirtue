@@ -40,3 +40,14 @@ npm run preview
 ```
 
 The preview server starts at `http://localhost:4173`.
+
+## SEO and social assets
+
+Placeholder images live in `public/` and should be replaced with final artwork using the same file names and dimensions:
+
+| File | Replace with | Dimensions | Format |
+| --- | --- | --- | --- |
+| `public/social-card.png` | Final social-sharing image (Open Graph / Twitter card) | 1200 × 630 px | PNG (or JPG, update the `og:image` tags in `index.html` if the extension changes) |
+| `public/apple-touch-icon.png` | Final app/touch icon | 180 × 180 px | PNG |
+
+Other SEO files: `public/robots.txt`, `public/sitemap.xml`, `public/site.webmanifest`, and JSON-LD structured data in `index.html`. Page titles and descriptions are centralized in `src/data/seo.ts`; the build step writes prerendered `dist/<slug>/index.html` files so legal pages ship unique titles, descriptions, and canonical URLs.
