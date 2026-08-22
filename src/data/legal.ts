@@ -1,3 +1,4 @@
+import { site } from '@/data/site.ts'
 import type { LegalPageContent } from '@/types/content.ts'
 
 export const legalNotice =
@@ -46,7 +47,7 @@ export const legalPages: readonly LegalPageContent[] = [
       {
         heading: 'Contact',
         paragraphs: [
-          'Questions about this policy can be sent to anthony@vibevirtue.com.',
+          `Questions about this policy can be sent to ${site.email}.`,
         ],
       },
     ],
@@ -102,7 +103,7 @@ export const legalPages: readonly LegalPageContent[] = [
       {
         heading: 'Contact information',
         paragraphs: [
-          'Questions about these terms can be sent to anthony@vibevirtue.com.',
+          `Questions about these terms can be sent to ${site.email}.`,
         ],
       },
     ],
@@ -136,7 +137,7 @@ export const legalPages: readonly LegalPageContent[] = [
       {
         heading: 'Contact',
         paragraphs: [
-          'Questions about this disclaimer can be sent to anthony@vibevirtue.com.',
+          `Questions about this disclaimer can be sent to ${site.email}.`,
         ],
       },
     ],
