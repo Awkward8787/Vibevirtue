@@ -35,7 +35,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-6">
         <a
-          href="#top"
+          href="/#top"
           className="rounded-sm font-heading text-lg font-bold tracking-tight text-text"
           onClick={closeMenu}
         >
