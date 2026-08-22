@@ -7,6 +7,18 @@ export type Service = {
   icon: LucideIcon
 }
 
+export type ProcessStep = {
+  id: string
+  title: string
+  description: string
+}
+
+export type CredibilityPoint = {
+  id: string
+  title: string
+  icon: LucideIcon
+}
+
 export type PackageAvailability = 'available' | 'limited' | 'waitlist'
 
 export type ConsultingPackage = {
