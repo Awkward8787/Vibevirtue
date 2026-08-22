@@ -6,7 +6,7 @@ type RootLayoutProps = {
 
 export function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="min-h-dvh bg-canvas text-ink">
+    <div className="min-h-dvh bg-bg text-text">
       <main>{children}</main>
     </div>
   )
