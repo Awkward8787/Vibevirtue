@@ -1,7 +1,9 @@
 import { ButtonLink } from '@/components/ButtonLink.tsx'
 import { Container } from '@/components/Container.tsx'
+import { OutcomesSection } from '@/components/OutcomesSection.tsx'
 import { Section } from '@/components/Section.tsx'
 import { SectionHeading } from '@/components/SectionHeading.tsx'
+import { ServicesSection } from '@/components/ServicesSection.tsx'
 import { consultation } from '@/data/consultation.ts'
 import { hero } from '@/data/hero.ts'
 
@@ -28,6 +30,10 @@ export function HomePage() {
           <p className="mt-6 text-sm text-text-secondary">{hero.note}</p>
         </Container>
       </Section>
+
+      <OutcomesSection />
+
+      <ServicesSection />
 
       <Section tone="secondary" id="packages" aria-labelledby="packages-heading">
         <Container>
