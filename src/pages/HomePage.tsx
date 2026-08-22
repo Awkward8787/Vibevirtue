@@ -1,6 +1,7 @@
 import { ButtonLink } from '@/components/ButtonLink.tsx'
 import { Container } from '@/components/Container.tsx'
 import { OutcomesSection } from '@/components/OutcomesSection.tsx'
+import { PackagesSection } from '@/components/PackagesSection.tsx'
 import { Section } from '@/components/Section.tsx'
 import { SectionHeading } from '@/components/SectionHeading.tsx'
 import { ServicesSection } from '@/components/ServicesSection.tsx'
@@ -35,14 +36,7 @@ export function HomePage() {
 
       <ServicesSection />
 
-      <Section tone="secondary" id="packages" aria-labelledby="packages-heading">
-        <Container>
-          <SectionHeading
-            title={<span id="packages-heading">Consulting Packages</span>}
-            description="Package details are coming in a later phase. In the meantime, request a consultation to discuss what you are working on."
-          />
-        </Container>
-      </Section>
+      <PackagesSection />
     </>
   )
 }
