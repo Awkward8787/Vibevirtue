@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/banner.png" alt="Vibe Virtue" width="100%">
+  <img src="assets/banner.png" alt="Vibe Virtue" width="100%">
 </p>
 
 # Vibe Virtue
@@ -13,6 +13,17 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
 
 Consulting website for [vibevirtue.com](https://vibevirtue.com). The production build is a static site and can be uploaded to Hostinger.
+
+## How it works
+
+```mermaid
+flowchart LR
+  visitor[Visitor] --> vite[Vite React static site]
+  vite --> pages[Services / Packages / About / FAQ / Contact]
+  pages --> hostinger[Hostinger static upload of dist/]
+```
+
+There is no app server in production. `npm run build` writes `dist/`; upload those files to Hostinger `public_html`.
 
 ## Installation
 
